@@ -9,13 +9,12 @@ public class LogDemo {
 	
 	private static final Logger LOGGER = LogManager.getLogger(LogDemo.class);
 	public static void main(String[] args) {
-
-		List<String> names = new ArrayList<>();
-		for(int i=0;i<10;i++) {
-			names.add("name"+i);
-		}
-		names.forEach(LOGGER::debug);
 		
+		List<Student> students = new ArrayList<>();
+		for(int i=1;i<=10;i++) {
+			students.add(new Student(i,"names"+i));
+		}
+		students.forEach(LOGGER::debug);
 	}
 
 }
